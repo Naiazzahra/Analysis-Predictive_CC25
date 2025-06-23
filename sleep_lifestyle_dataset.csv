@@ -1,0 +1,515 @@
+Person ID,Gender,Age,Occupation,Sleep Duration,Quality of Sleep,Physical Activity Level,Stress Level,BMI Category,Blood Pressure,Heart Rate,Daily Steps,Sleep Disorder
+1,Male,27,Software Engineer,6.1,6,42,6,Overweight,126/83,77,4200,
+2,Male,28,Doctor,6.2,6,60,8,Normal,125/80,75,10000,
+3,Male,28,Doctor,6.2,6,60,8,Normal,125/80,75,10000,
+4,Male,28,Sales Representative,5.9,4,30,8,Obese,140/90,85,3000,Sleep Apnea
+5,Male,28,Sales Representative,5.9,4,30,8,Obese,140/90,85,3000,Sleep Apnea
+6,Male,28,Software Engineer,5.9,4,30,8,Obese,140/90,85,3000,Insomnia
+7,Male,29,Teacher,6.3,6,40,7,Obese,140/90,82,3500,Insomnia
+8,Male,29,Doctor,7.8,7,75,6,Normal,120/80,70,8000,
+9,Male,29,Doctor,7.8,7,75,6,Normal,120/80,70,8000,
+10,Male,29,Doctor,7.8,7,75,6,Normal,120/80,70,8000,
+11,Male,29,Doctor,6.1,6,30,8,Normal,120/80,70,8000,
+12,Male,29,Doctor,7.8,7,75,6,Normal,120/80,70,8000,
+13,Male,29,Doctor,6.1,6,30,8,Normal,120/80,70,8000,
+14,Male,29,Doctor,6.0,6,30,8,Normal,120/80,70,8000,
+15,Male,29,Doctor,6.0,6,30,8,Normal,120/80,70,8000,
+16,Male,29,Doctor,6.0,6,30,8,Normal,120/80,70,8000,
+17,Female,29,Nurse,6.5,5,40,7,Normal Weight,132/87,80,4000,Sleep Apnea
+18,Male,29,Doctor,6.0,6,30,8,Normal,120/80,70,8000,Sleep Apnea
+19,Female,29,Nurse,6.5,5,40,7,Normal Weight,132/87,80,4000,Insomnia
+20,Male,30,Doctor,7.6,7,75,6,Normal,120/80,70,8000,
+21,Male,30,Doctor,7.7,7,75,6,Normal,120/80,70,8000,
+22,Male,30,Doctor,7.7,7,75,6,Normal,120/80,70,8000,
+23,Male,30,Doctor,7.7,7,75,6,Normal,120/80,70,8000,
+24,Male,30,Doctor,7.7,7,75,6,Normal,120/80,70,8000,
+25,Male,30,Doctor,7.8,7,75,6,Normal,120/80,70,8000,
+26,Male,30,Doctor,7.9,7,75,6,Normal,120/80,70,8000,
+27,Male,30,Doctor,7.8,7,75,6,Normal,120/80,70,8000,
+28,Male,30,Doctor,7.9,7,75,6,Normal,120/80,70,8000,
+29,Male,30,Doctor,7.9,7,75,6,Normal,120/80,70,8000,
+30,Male,30,Doctor,7.9,7,75,6,Normal,120/80,70,8000,
+31,Female,30,Nurse,6.4,5,35,7,Normal Weight,130/86,78,4100,Sleep Apnea
+32,Female,30,Nurse,6.4,5,35,7,Normal Weight,130/86,78,4100,Insomnia
+33,Female,31,Nurse,7.9,8,75,4,Normal Weight,117/76,69,6800,
+34,Male,31,Doctor,6.1,6,30,8,Normal,125/80,72,5000,
+35,Male,31,Doctor,7.7,7,75,6,Normal,120/80,70,8000,
+36,Male,31,Doctor,6.1,6,30,8,Normal,125/80,72,5000,
+37,Male,31,Doctor,6.1,6,30,8,Normal,125/80,72,5000,
+38,Male,31,Doctor,7.6,7,75,6,Normal,120/80,70,8000,
+39,Male,31,Doctor,7.6,7,75,6,Normal,120/80,70,8000,
+40,Male,31,Doctor,7.6,7,75,6,Normal,120/80,70,8000,
+41,Male,31,Doctor,7.7,7,75,6,Normal,120/80,70,8000,
+42,Male,31,Doctor,7.7,7,75,6,Normal,120/80,70,8000,
+43,Male,31,Doctor,7.7,7,75,6,Normal,120/80,70,8000,
+44,Male,31,Doctor,7.8,7,75,6,Normal,120/80,70,8000,
+45,Male,31,Doctor,7.7,7,75,6,Normal,120/80,70,8000,
+46,Male,31,Doctor,7.8,7,75,6,Normal,120/80,70,8000,
+47,Male,31,Doctor,7.7,7,75,6,Normal,120/80,70,8000,
+48,Male,31,Doctor,7.8,7,75,6,Normal,120/80,70,8000,
+49,Male,31,Doctor,7.7,7,75,6,Normal,120/80,70,8000,
+50,Male,31,Doctor,7.7,7,75,6,Normal,120/80,70,8000,Sleep Apnea
+51,Male,32,Engineer,7.5,8,45,3,Normal,120/80,70,8000,
+52,Male,32,Engineer,7.5,8,45,3,Normal,120/80,70,8000,
+53,Male,32,Doctor,6.0,6,30,8,Normal,125/80,72,5000,
+54,Male,32,Doctor,7.6,7,75,6,Normal,120/80,70,8000,
+55,Male,32,Doctor,6.0,6,30,8,Normal,125/80,72,5000,
+56,Male,32,Doctor,6.0,6,30,8,Normal,125/80,72,5000,
+57,Male,32,Doctor,7.7,7,75,6,Normal,120/80,70,8000,
+58,Male,32,Doctor,6.0,6,30,8,Normal,125/80,72,5000,
+59,Male,32,Doctor,6.0,6,30,8,Normal,125/80,72,5000,
+60,Male,32,Doctor,7.7,7,75,6,Normal,120/80,70,8000,
+61,Male,32,Doctor,6.0,6,30,8,Normal,125/80,72,5000,
+62,Male,32,Doctor,6.0,6,30,8,Normal,125/80,72,5000,
+63,Male,32,Doctor,6.2,6,30,8,Normal,125/80,72,5000,
+64,Male,32,Doctor,6.2,6,30,8,Normal,125/80,72,5000,
+65,Male,32,Doctor,6.2,6,30,8,Normal,125/80,72,5000,
+66,Male,32,Doctor,6.2,6,30,8,Normal,125/80,72,5000,
+67,Male,32,Accountant,7.2,8,50,6,Normal Weight,118/76,68,7000,
+68,Male,33,Doctor,6.0,6,30,8,Normal,125/80,72,5000,Insomnia
+69,Female,33,Scientist,6.2,6,50,6,Overweight,128/85,76,5500,
+70,Female,33,Scientist,6.2,6,50,6,Overweight,128/85,76,5500,
+71,Male,33,Doctor,6.1,6,30,8,Normal,125/80,72,5000,
+72,Male,33,Doctor,6.1,6,30,8,Normal,125/80,72,5000,
+73,Male,33,Doctor,6.1,6,30,8,Normal,125/80,72,5000,
+74,Male,33,Doctor,6.1,6,30,8,Normal,125/80,72,5000,
+75,Male,33,Doctor,6.0,6,30,8,Normal,125/80,72,5000,
+76,Male,33,Doctor,6.0,6,30,8,Normal,125/80,72,5000,
+77,Male,33,Doctor,6.0,6,30,8,Normal,125/80,72,5000,
+78,Male,33,Doctor,6.0,6,30,8,Normal,125/80,72,5000,
+79,Male,33,Doctor,6.0,6,30,8,Normal,125/80,72,5000,
+80,Male,33,Doctor,6.0,6,30,8,Normal,125/80,72,5000,
+81,Female,34,Scientist,5.8,4,32,8,Overweight,131/86,81,5200,Sleep Apnea
+82,Female,34,Scientist,5.8,4,32,8,Overweight,131/86,81,5200,Sleep Apnea
+83,Male,35,Teacher,6.7,7,40,5,Overweight,128/84,70,5600,
+84,Male,35,Teacher,6.7,7,40,5,Overweight,128/84,70,5600,
+85,Male,35,Software Engineer,7.5,8,60,5,Normal Weight,120/80,70,8000,
+86,Female,35,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+87,Male,35,Engineer,7.2,8,60,4,Normal,125/80,65,5000,
+88,Male,35,Engineer,7.2,8,60,4,Normal,125/80,65,5000,
+89,Male,35,Engineer,7.3,8,60,4,Normal,125/80,65,5000,
+90,Male,35,Engineer,7.3,8,60,4,Normal,125/80,65,5000,
+91,Male,35,Engineer,7.3,8,60,4,Normal,125/80,65,5000,
+92,Male,35,Engineer,7.3,8,60,4,Normal,125/80,65,5000,
+93,Male,35,Software Engineer,7.5,8,60,5,Normal Weight,120/80,70,8000,
+94,Male,35,Lawyer,7.4,7,60,5,Obese,135/88,84,3300,Sleep Apnea
+95,Female,36,Accountant,7.2,8,60,4,Normal,115/75,68,7000,Insomnia
+96,Female,36,Accountant,7.1,8,60,4,Normal,115/75,68,7000,
+97,Female,36,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+98,Female,36,Accountant,7.1,8,60,4,Normal,115/75,68,7000,
+99,Female,36,Teacher,7.1,8,60,4,Normal,115/75,68,7000,
+100,Female,36,Teacher,7.1,8,60,4,Normal,115/75,68,7000,
+101,Female,36,Teacher,7.2,8,60,4,Normal,115/75,68,7000,
+102,Female,36,Teacher,7.2,8,60,4,Normal,115/75,68,7000,
+103,Female,36,Teacher,7.2,8,60,4,Normal,115/75,68,7000,
+104,Male,36,Teacher,6.6,5,35,7,Overweight,129/84,74,4800,Sleep Apnea
+105,Female,36,Teacher,7.2,8,60,4,Normal,115/75,68,7000,Sleep Apnea
+106,Male,36,Teacher,6.6,5,35,7,Overweight,129/84,74,4800,Insomnia
+107,Female,37,Nurse,6.1,6,42,6,Overweight,126/83,77,4200,
+108,Male,37,Engineer,7.8,8,70,4,Normal Weight,120/80,68,7000,
+109,Male,37,Engineer,7.8,8,70,4,Normal Weight,120/80,68,7000,
+110,Male,37,Lawyer,7.4,8,60,5,Normal,130/85,68,8000,
+111,Female,37,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+112,Male,37,Lawyer,7.4,8,60,5,Normal,130/85,68,8000,
+113,Female,37,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+114,Male,37,Lawyer,7.4,8,60,5,Normal,130/85,68,8000,
+115,Female,37,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+116,Female,37,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+117,Female,37,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+118,Female,37,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+119,Female,37,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+120,Female,37,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+121,Female,37,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+122,Female,37,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+123,Female,37,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+124,Female,37,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+125,Female,37,Accountant,7.2,8,60,4,Normal,115/75,68,7000,
+126,Female,37,Nurse,7.5,8,60,4,Normal Weight,120/80,70,8000,
+127,Male,38,Lawyer,7.3,8,60,5,Normal,130/85,68,8000,
+128,Female,38,Accountant,7.1,8,60,4,Normal,115/75,68,7000,
+129,Male,38,Lawyer,7.3,8,60,5,Normal,130/85,68,8000,
+130,Male,38,Lawyer,7.3,8,60,5,Normal,130/85,68,8000,
+131,Female,38,Accountant,7.1,8,60,4,Normal,115/75,68,7000,
+132,Male,38,Lawyer,7.3,8,60,5,Normal,130/85,68,8000,
+133,Male,38,Lawyer,7.3,8,60,5,Normal,130/85,68,8000,
+134,Female,38,Accountant,7.1,8,60,4,Normal,115/75,68,7000,
+135,Male,38,Lawyer,7.3,8,60,5,Normal,130/85,68,8000,
+136,Male,38,Lawyer,7.3,8,60,5,Normal,130/85,68,8000,
+137,Female,38,Accountant,7.1,8,60,4,Normal,115/75,68,7000,
+138,Male,38,Lawyer,7.1,8,60,5,Normal,130/85,68,8000,
+139,Female,38,Accountant,7.1,8,60,4,Normal,115/75,68,7000,
+140,Male,38,Lawyer,7.1,8,60,5,Normal,130/85,68,8000,
+141,Female,38,Accountant,7.1,8,60,4,Normal,115/75,68,7000,
+142,Male,38,Lawyer,7.1,8,60,5,Normal,130/85,68,8000,
+143,Female,38,Accountant,7.1,8,60,4,Normal,115/75,68,7000,
+144,Female,38,Accountant,7.1,8,60,4,Normal,115/75,68,7000,
+145,Male,38,Lawyer,7.1,8,60,5,Normal,130/85,68,8000,Sleep Apnea
+146,Female,38,Lawyer,7.4,7,60,5,Obese,135/88,84,3300,Sleep Apnea
+147,Male,39,Lawyer,7.2,8,60,5,Normal,130/85,68,8000,Insomnia
+148,Male,39,Engineer,6.5,5,40,7,Overweight,132/87,80,4000,Insomnia
+149,Female,39,Lawyer,6.9,7,50,6,Normal Weight,128/85,75,5500,
+150,Female,39,Accountant,8.0,9,80,3,Normal Weight,115/78,67,7500,
+151,Female,39,Accountant,8.0,9,80,3,Normal Weight,115/78,67,7500,
+152,Male,39,Lawyer,7.2,8,60,5,Normal,130/85,68,8000,
+153,Male,39,Lawyer,7.2,8,60,5,Normal,130/85,68,8000,
+154,Male,39,Lawyer,7.2,8,60,5,Normal,130/85,68,8000,
+155,Male,39,Lawyer,7.2,8,60,5,Normal,130/85,68,8000,
+156,Male,39,Lawyer,7.2,8,60,5,Normal,130/85,68,8000,
+157,Male,39,Lawyer,7.2,8,60,5,Normal,130/85,68,8000,
+158,Male,39,Lawyer,7.2,8,60,5,Normal,130/85,68,8000,
+159,Male,39,Lawyer,7.2,8,60,5,Normal,130/85,68,8000,
+160,Male,39,Lawyer,7.2,8,60,5,Normal,130/85,68,8000,
+161,Male,39,Lawyer,7.2,8,60,5,Normal,130/85,68,8000,
+162,Female,40,Accountant,7.2,8,55,6,Normal Weight,119/77,73,7300,
+163,Female,40,Accountant,7.2,8,55,6,Normal Weight,119/77,73,7300,
+164,Male,40,Lawyer,7.9,8,90,5,Normal,130/85,68,8000,
+165,Male,40,Lawyer,7.9,8,90,5,Normal,130/85,68,8000,
+166,Male,41,Lawyer,7.6,8,90,5,Normal,130/85,70,8000,Insomnia
+167,Male,41,Engineer,7.3,8,70,6,Normal Weight,121/79,72,6200,
+168,Male,41,Lawyer,7.1,7,55,6,Overweight,125/82,72,6000,
+169,Male,41,Lawyer,7.1,7,55,6,Overweight,125/82,72,6000,
+170,Male,41,Lawyer,7.7,8,90,5,Normal,130/85,70,8000,
+171,Male,41,Lawyer,7.7,8,90,5,Normal,130/85,70,8000,
+172,Male,41,Lawyer,7.7,8,90,5,Normal,130/85,70,8000,
+173,Male,41,Lawyer,7.7,8,90,5,Normal,130/85,70,8000,
+174,Male,41,Lawyer,7.7,8,90,5,Normal,130/85,70,8000,
+175,Male,41,Lawyer,7.6,8,90,5,Normal,130/85,70,8000,
+176,Male,41,Lawyer,7.6,8,90,5,Normal,130/85,70,8000,
+177,Male,41,Lawyer,7.6,8,90,5,Normal,130/85,70,8000,
+178,Male,42,Salesperson,6.5,6,45,7,Overweight,130/85,72,6000,Insomnia
+179,Male,42,Lawyer,7.8,8,90,5,Normal,130/85,70,8000,
+180,Male,42,Lawyer,7.8,8,90,5,Normal,130/85,70,8000,
+181,Male,42,Lawyer,7.8,8,90,5,Normal,130/85,70,8000,
+182,Male,42,Lawyer,7.8,8,90,5,Normal,130/85,70,8000,
+183,Male,42,Lawyer,7.8,8,90,5,Normal,130/85,70,8000,
+184,Male,42,Lawyer,7.8,8,90,5,Normal,130/85,70,8000,
+185,Female,42,Teacher,6.8,6,45,7,Overweight,130/85,78,5000,Sleep Apnea
+186,Female,42,Teacher,6.8,6,45,7,Overweight,130/85,78,5000,Sleep Apnea
+187,Female,43,Teacher,6.7,7,45,4,Overweight,135/90,65,6000,Insomnia
+188,Male,43,Salesperson,6.3,6,45,7,Overweight,130/85,72,6000,Insomnia
+189,Female,43,Teacher,6.7,7,45,4,Overweight,135/90,65,6000,Insomnia
+190,Male,43,Salesperson,6.5,6,45,7,Overweight,130/85,72,6000,Insomnia
+191,Female,43,Teacher,6.7,7,45,4,Overweight,135/90,65,6000,Insomnia
+192,Male,43,Salesperson,6.4,6,45,7,Overweight,130/85,72,6000,Insomnia
+193,Male,43,Salesperson,6.5,6,45,7,Overweight,130/85,72,6000,Insomnia
+194,Male,43,Salesperson,6.5,6,45,7,Overweight,130/85,72,6000,Insomnia
+195,Male,43,Salesperson,6.5,6,45,7,Overweight,130/85,72,6000,Insomnia
+196,Male,43,Salesperson,6.5,6,45,7,Overweight,130/85,72,6000,Insomnia
+197,Male,43,Salesperson,6.5,6,45,7,Overweight,130/85,72,6000,Insomnia
+198,Male,43,Salesperson,6.5,6,45,7,Overweight,130/85,72,6000,Insomnia
+199,Male,43,Salesperson,6.5,6,45,7,Overweight,130/85,72,6000,Insomnia
+200,Male,43,Salesperson,6.5,6,45,7,Overweight,130/85,72,6000,Insomnia
+201,Male,43,Salesperson,6.5,6,45,7,Overweight,130/85,72,6000,Insomnia
+202,Male,43,Engineer,7.8,8,90,5,Normal,130/85,70,8000,Insomnia
+203,Male,43,Engineer,7.8,8,90,5,Normal,130/85,70,8000,Insomnia
+204,Male,43,Engineer,6.9,6,47,7,Normal Weight,117/76,69,6800,
+205,Male,43,Engineer,7.6,8,75,4,Overweight,122/80,68,6800,
+206,Male,43,Engineer,7.7,8,90,5,Normal,130/85,70,8000,
+207,Male,43,Engineer,7.7,8,90,5,Normal,130/85,70,8000,
+208,Male,43,Engineer,7.7,8,90,5,Normal,130/85,70,8000,
+209,Male,43,Engineer,7.7,8,90,5,Normal,130/85,70,8000,
+210,Male,43,Engineer,7.8,8,90,5,Normal,130/85,70,8000,
+211,Male,43,Engineer,7.7,8,90,5,Normal,130/85,70,8000,
+212,Male,43,Engineer,7.8,8,90,5,Normal,130/85,70,8000,
+213,Male,43,Engineer,7.8,8,90,5,Normal,130/85,70,8000,
+214,Male,43,Engineer,7.8,8,90,5,Normal,130/85,70,8000,
+215,Male,43,Engineer,7.8,8,90,5,Normal,130/85,70,8000,
+216,Male,43,Engineer,7.8,8,90,5,Normal,130/85,70,8000,
+217,Male,43,Engineer,7.8,8,90,5,Normal,130/85,70,8000,
+218,Male,43,Engineer,7.8,8,90,5,Normal,130/85,70,8000,
+219,Male,43,Engineer,7.8,8,90,5,Normal,130/85,70,8000,Sleep Apnea
+220,Male,43,Salesperson,6.5,6,45,7,Overweight,130/85,72,6000,Sleep Apnea
+221,Female,44,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,Insomnia
+222,Male,44,Salesperson,6.4,6,45,7,Overweight,130/85,72,6000,Insomnia
+223,Male,44,Salesperson,6.3,6,45,7,Overweight,130/85,72,6000,Insomnia
+224,Male,44,Salesperson,6.4,6,45,7,Overweight,130/85,72,6000,Insomnia
+225,Female,44,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,Insomnia
+226,Male,44,Salesperson,6.3,6,45,7,Overweight,130/85,72,6000,Insomnia
+227,Female,44,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,Insomnia
+228,Male,44,Salesperson,6.3,6,45,7,Overweight,130/85,72,6000,Insomnia
+229,Female,44,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,Insomnia
+230,Male,44,Salesperson,6.3,6,45,7,Overweight,130/85,72,6000,Insomnia
+231,Female,44,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,Insomnia
+232,Male,44,Salesperson,6.3,6,45,7,Overweight,130/85,72,6000,Insomnia
+233,Female,44,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,Insomnia
+234,Male,44,Salesperson,6.3,6,45,7,Overweight,130/85,72,6000,Insomnia
+235,Female,44,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,Insomnia
+236,Male,44,Salesperson,6.3,6,45,7,Overweight,130/85,72,6000,Insomnia
+237,Male,44,Salesperson,6.4,6,45,7,Overweight,130/85,72,6000,Insomnia
+238,Female,44,Teacher,6.5,7,45,4,Overweight,135/90,65,6000,Insomnia
+239,Male,44,Salesperson,6.3,6,45,7,Overweight,130/85,72,6000,Insomnia
+240,Male,44,Salesperson,6.4,6,45,7,Overweight,130/85,72,6000,Insomnia
+241,Female,44,Teacher,6.5,7,45,4,Overweight,135/90,65,6000,Insomnia
+242,Male,44,Salesperson,6.3,6,45,7,Overweight,130/85,72,6000,Insomnia
+243,Male,44,Salesperson,6.4,6,45,7,Overweight,130/85,72,6000,Insomnia
+244,Female,44,Teacher,6.5,7,45,4,Overweight,135/90,65,6000,Insomnia
+245,Male,44,Salesperson,6.3,6,45,7,Overweight,130/85,72,6000,Insomnia
+246,Female,44,Teacher,6.5,7,45,4,Overweight,135/90,65,6000,Insomnia
+247,Male,44,Salesperson,6.3,6,45,7,Overweight,130/85,72,6000,Insomnia
+248,Male,44,Engineer,6.8,7,45,7,Overweight,130/85,78,5000,Insomnia
+249,Male,44,Salesperson,6.4,6,45,7,Overweight,130/85,72,6000,
+250,Male,44,Salesperson,6.5,6,45,7,Overweight,130/85,72,6000,
+251,Female,45,Teacher,6.8,7,30,6,Overweight,135/90,65,6000,Insomnia
+252,Female,45,Teacher,6.8,7,30,6,Overweight,135/90,65,6000,Insomnia
+253,Female,45,Teacher,6.5,7,45,4,Overweight,135/90,65,6000,Insomnia
+254,Female,45,Teacher,6.5,7,45,4,Overweight,135/90,65,6000,Insomnia
+255,Female,45,Teacher,6.5,7,45,4,Overweight,135/90,65,6000,Insomnia
+256,Female,45,Teacher,6.5,7,45,4,Overweight,135/90,65,6000,Insomnia
+257,Female,45,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,Insomnia
+258,Female,45,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,Insomnia
+259,Female,45,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,Insomnia
+260,Female,45,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,Insomnia
+261,Female,45,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,Insomnia
+262,Female,45,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,
+263,Female,45,Teacher,6.6,7,45,4,Overweight,135/90,65,6000,
+264,Female,45,Manager,6.9,7,55,5,Overweight,125/82,75,5500,
+265,Male,48,Doctor,7.3,7,65,5,Obese,142/92,83,3500,Insomnia
+266,Female,48,Nurse,5.9,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+267,Male,48,Doctor,7.3,7,65,5,Obese,142/92,83,3500,Insomnia
+268,Female,49,Nurse,6.2,6,90,8,Overweight,140/95,75,10000,
+269,Female,49,Nurse,6.0,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+270,Female,49,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+271,Female,49,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+272,Female,49,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+273,Female,49,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+274,Female,49,Nurse,6.2,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+275,Female,49,Nurse,6.2,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+276,Female,49,Nurse,6.2,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+277,Male,49,Doctor,8.1,9,85,3,Obese,139/91,86,3700,Sleep Apnea
+278,Male,49,Doctor,8.1,9,85,3,Obese,139/91,86,3700,Sleep Apnea
+279,Female,50,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Insomnia
+280,Female,50,Engineer,8.3,9,30,3,Normal,125/80,65,5000,
+281,Female,50,Nurse,6.0,6,90,8,Overweight,140/95,75,10000,
+282,Female,50,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+283,Female,50,Nurse,6.0,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+284,Female,50,Nurse,6.0,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+285,Female,50,Nurse,6.0,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+286,Female,50,Nurse,6.0,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+287,Female,50,Nurse,6.0,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+288,Female,50,Nurse,6.0,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+289,Female,50,Nurse,6.0,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+290,Female,50,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+291,Female,50,Nurse,6.0,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+292,Female,50,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+293,Female,50,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+294,Female,50,Nurse,6.0,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+295,Female,50,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+296,Female,50,Nurse,6.0,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+297,Female,50,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+298,Female,50,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+299,Female,51,Engineer,8.5,9,30,3,Normal,125/80,65,5000,
+300,Female,51,Engineer,8.5,9,30,3,Normal,125/80,65,5000,
+301,Female,51,Engineer,8.5,9,30,3,Normal,125/80,65,5000,
+302,Female,51,Engineer,8.5,9,30,3,Normal,125/80,65,5000,
+303,Female,51,Nurse,7.1,7,55,6,Normal Weight,125/82,72,6000,
+304,Female,51,Nurse,6.0,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+305,Female,51,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+306,Female,51,Nurse,6.1,6,90,8,Overweight,140/95,75,10000,Sleep Apnea
+307,Female,52,Accountant,6.5,7,45,7,Overweight,130/85,72,6000,Insomnia
+308,Female,52,Accountant,6.5,7,45,7,Overweight,130/85,72,6000,Insomnia
+309,Female,52,Accountant,6.6,7,45,7,Overweight,130/85,72,6000,Insomnia
+310,Female,52,Accountant,6.6,7,45,7,Overweight,130/85,72,6000,Insomnia
+311,Female,52,Accountant,6.6,7,45,7,Overweight,130/85,72,6000,Insomnia
+312,Female,52,Accountant,6.6,7,45,7,Overweight,130/85,72,6000,Insomnia
+313,Female,52,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+314,Female,52,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+315,Female,52,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+316,Female,53,Engineer,8.3,9,30,3,Normal,125/80,65,5000,Insomnia
+317,Female,53,Engineer,8.5,9,30,3,Normal,125/80,65,5000,
+318,Female,53,Engineer,8.5,9,30,3,Normal,125/80,65,5000,
+319,Female,53,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+320,Female,53,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+321,Female,53,Engineer,8.5,9,30,3,Normal,125/80,65,5000,
+322,Female,53,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+323,Female,53,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+324,Female,53,Engineer,8.5,9,30,3,Normal,125/80,65,5000,
+325,Female,53,Engineer,8.3,9,30,3,Normal,125/80,65,5000,
+326,Female,53,Engineer,8.5,9,30,3,Normal,125/80,65,5000,
+327,Female,53,Engineer,8.3,9,30,3,Normal,125/80,65,5000,
+328,Female,53,Engineer,8.5,9,30,3,Normal,125/80,65,5000,
+329,Female,53,Engineer,8.3,9,30,3,Normal,125/80,65,5000,
+330,Female,53,Engineer,8.5,9,30,3,Normal,125/80,65,5000,
+331,Female,53,Engineer,8.5,9,30,3,Normal,125/80,65,5000,
+332,Female,53,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+333,Female,54,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+334,Female,54,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+335,Female,54,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+336,Female,54,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+337,Female,54,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+338,Female,54,Engineer,8.4,9,30,3,Normal,125/80,65,5000,
+339,Female,54,Engineer,8.5,9,30,3,Normal,125/80,65,5000,
+340,Female,55,Nurse,8.1,9,75,4,Overweight,140/95,72,5000,Sleep Apnea
+341,Female,55,Nurse,8.1,9,75,4,Overweight,140/95,72,5000,Sleep Apnea
+342,Female,56,Doctor,8.2,9,90,3,Normal Weight,118/75,65,10000,
+343,Female,56,Doctor,8.2,9,90,3,Normal Weight,118/75,65,10000,
+344,Female,57,Nurse,8.1,9,75,3,Overweight,140/95,68,7000,
+345,Female,57,Nurse,8.2,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+346,Female,57,Nurse,8.2,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+347,Female,57,Nurse,8.2,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+348,Female,57,Nurse,8.2,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+349,Female,57,Nurse,8.2,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+350,Female,57,Nurse,8.1,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+351,Female,57,Nurse,8.1,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+352,Female,57,Nurse,8.1,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+353,Female,58,Nurse,8.0,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+354,Female,58,Nurse,8.0,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+355,Female,58,Nurse,8.0,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+356,Female,58,Nurse,8.0,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+357,Female,58,Nurse,8.0,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+358,Female,58,Nurse,8.0,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+359,Female,59,Nurse,8.0,9,75,3,Overweight,140/95,68,7000,
+360,Female,59,Nurse,8.1,9,75,3,Overweight,140/95,68,7000,
+361,Female,59,Nurse,8.2,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+362,Female,59,Nurse,8.2,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+363,Female,59,Nurse,8.2,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+364,Female,59,Nurse,8.2,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+365,Female,59,Nurse,8.0,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+366,Female,59,Nurse,8.0,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+367,Female,59,Nurse,8.1,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+368,Female,59,Nurse,8.0,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+369,Female,59,Nurse,8.1,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+370,Female,59,Nurse,8.1,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+371,Female,59,Nurse,8.0,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+372,Female,59,Nurse,8.1,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+373,Female,59,Nurse,8.1,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+374,Female,59,Nurse,8.1,9,75,3,Overweight,140/95,68,7000,Sleep Apnea
+1001,Male,31,Nurse,7.6,4,76,9,Overweight,120/80,73,14223,Insomnia
+1002,Female,35,Engineer,3.0,1,21,9,Underweight,130/90,68,14042,Insomnia
+1003,Female,60,Doctor,3.3,2,82,3,Overweight,120/80,88,8561,Insomnia
+1004,Female,20,Engineer,6.5,5,23,10,Underweight,140/95,67,1643,None
+1005,Male,52,Teacher,7.3,8,38,6,Obese,120/80,88,6702,None
+1006,Female,55,Doctor,5.8,8,12,2,Overweight,120/80,60,11868,Insomnia
+1007,Male,23,Nurse,6.2,6,16,5,Obese,120/80,92,7667,None
+1008,Female,45,Nurse,5.4,4,64,8,Overweight,140/95,72,11167,Sleep Apnea
+1009,Female,36,Student,8.0,7,95,3,Obese,120/80,93,3346,Insomnia
+1010,Female,57,Scientist,8.2,4,41,10,Obese,120/80,78,8559,Insomnia
+1011,Male,59,Nurse,7.4,5,18,5,Underweight,130/90,81,14163,Insomnia
+1012,Male,27,Nurse,7.8,7,48,5,Overweight,120/80,61,12554,Insomnia
+1013,Male,31,Teacher,8.2,6,82,8,Underweight,140/95,79,11061,None
+1014,Male,41,Engineer,8.0,3,15,3,Normal,130/90,88,9908,Insomnia
+1015,Female,52,Scientist,6.5,3,73,6,Underweight,140/95,79,11601,None
+1016,Female,29,Doctor,9.4,3,46,7,Obese,120/80,64,10265,Sleep Apnea
+1017,Male,36,Student,6.7,9,22,4,Underweight,140/95,78,6419,Insomnia
+1018,Male,32,Scientist,6.0,5,32,5,Normal,140/95,93,5449,Insomnia
+1019,Male,40,Engineer,5.7,2,46,5,Overweight,110/70,77,3071,None
+1020,Female,56,Nurse,4.2,1,32,6,Underweight,120/80,67,2886,None
+1021,Female,59,Nurse,8.8,6,57,2,Underweight,110/70,72,13769,Insomnia
+1022,Male,28,Scientist,4.6,9,14,8,Underweight,140/95,78,14539,None
+1023,Male,61,Student,8.3,4,91,8,Underweight,140/95,93,4020,None
+1024,Male,19,Doctor,9.8,5,86,2,Normal,110/70,99,13191,None
+1025,Male,54,Doctor,8.0,2,93,10,Normal,140/95,84,12917,None
+1026,Female,61,Teacher,3.0,8,85,2,Normal,120/80,98,12555,None
+1027,Female,41,Student,9.0,3,88,10,Obese,120/80,89,7612,Sleep Apnea
+1028,Male,30,Doctor,7.4,3,38,8,Normal,110/70,61,14709,Insomnia
+1029,Male,52,Doctor,6.8,8,64,4,Obese,130/90,70,11497,Sleep Apnea
+1030,Female,46,Engineer,7.0,4,92,9,Overweight,140/95,60,12283,None
+1031,Female,26,Student,6.6,2,47,5,Underweight,140/95,75,10291,Insomnia
+1032,Female,50,Doctor,7.6,6,68,7,Overweight,130/90,97,11403,Sleep Apnea
+1033,Male,59,Engineer,6.3,3,54,2,Underweight,140/95,93,12356,None
+1034,Female,47,Teacher,7.2,10,5,6,Obese,120/80,70,7832,Sleep Apnea
+1035,Female,19,Teacher,5.8,6,92,9,Normal,140/95,73,10395,None
+1036,Male,55,Scientist,6.2,6,59,8,Overweight,120/80,71,4217,None
+1037,Male,47,Engineer,8.5,3,58,6,Normal,120/80,88,2924,None
+1038,Male,22,Scientist,7.2,7,61,9,Normal,140/95,62,3765,Insomnia
+1039,Male,50,Engineer,6.6,5,21,10,Obese,120/80,66,4005,None
+1040,Female,32,Nurse,4.5,9,16,1,Obese,120/80,73,6319,None
+1041,Female,20,Doctor,7.4,2,8,1,Overweight,110/70,97,1331,Insomnia
+1042,Female,44,Engineer,9.4,3,87,3,Normal,110/70,81,13365,Insomnia
+1043,Male,53,Scientist,7.4,7,99,1,Underweight,110/70,91,12261,Insomnia
+1044,Male,18,Student,10.0,5,46,7,Normal,130/90,75,7831,None
+1045,Male,19,Engineer,8.9,2,38,5,Overweight,120/80,78,8985,None
+1046,Male,38,Doctor,5.6,8,69,7,Obese,140/95,93,14567,Sleep Apnea
+1047,Male,29,Scientist,6.8,2,76,1,Underweight,130/90,81,9629,Sleep Apnea
+1048,Female,60,Nurse,7.7,7,50,9,Overweight,140/95,66,12541,Insomnia
+1049,Female,53,Engineer,6.3,5,2,1,Normal,130/90,66,6774,None
+1050,Male,19,Scientist,6.9,2,99,1,Obese,130/90,98,11260,Sleep Apnea
+1051,Male,19,Teacher,7.7,7,91,3,Normal,120/80,86,8302,Sleep Apnea
+1052,Male,54,Doctor,6.8,10,14,6,Underweight,130/90,72,13517,Insomnia
+1053,Female,49,Engineer,9.9,3,31,2,Obese,120/80,92,11144,Sleep Apnea
+1054,Female,28,Teacher,8.6,6,23,7,Underweight,110/70,82,3569,Sleep Apnea
+1055,Female,37,Nurse,6.6,1,19,4,Underweight,140/95,95,9305,Sleep Apnea
+1056,Female,62,Student,8.6,1,53,1,Obese,140/95,61,7622,Insomnia
+1057,Female,27,Scientist,3.5,7,16,6,Obese,140/95,95,1828,Insomnia
+1058,Male,23,Nurse,8.0,6,26,3,Overweight,120/80,77,2679,Sleep Apnea
+1059,Male,49,Engineer,7.1,9,21,9,Normal,130/90,71,11957,None
+1060,Female,20,Nurse,5.8,7,41,5,Overweight,130/90,62,4377,None
+1061,Female,32,Doctor,4.0,2,50,1,Normal,110/70,75,3269,Insomnia
+1062,Male,58,Student,7.2,2,21,4,Normal,130/90,61,13763,Sleep Apnea
+1063,Female,36,Teacher,6.7,6,85,2,Overweight,130/90,88,7619,Sleep Apnea
+1064,Male,61,Doctor,7.6,2,69,10,Underweight,120/80,61,12368,None
+1065,Female,64,Nurse,5.9,5,86,3,Overweight,140/95,70,5627,Insomnia
+1066,Male,42,Scientist,10.0,6,57,3,Normal,140/95,65,5083,Sleep Apnea
+1067,Male,47,Scientist,8.2,5,85,8,Underweight,140/95,61,8748,Insomnia
+1068,Female,49,Nurse,6.0,3,1,5,Underweight,130/90,93,8825,Sleep Apnea
+1069,Female,42,Doctor,6.5,3,30,4,Normal,140/95,74,2916,None
+1070,Female,38,Doctor,6.9,8,73,3,Underweight,130/90,65,2893,Sleep Apnea
+1071,Female,38,Doctor,5.5,10,24,8,Obese,120/80,90,2475,Insomnia
+1072,Male,49,Scientist,7.9,1,37,10,Normal,140/95,96,6661,None
+1073,Female,32,Nurse,8.5,4,39,5,Underweight,130/90,93,11894,Sleep Apnea
+1074,Female,57,Scientist,7.8,8,59,8,Underweight,130/90,69,4827,Sleep Apnea
+1075,Male,50,Scientist,9.8,6,63,4,Normal,140/95,61,3347,None
+1076,Male,23,Student,8.6,1,84,5,Normal,110/70,99,2881,Insomnia
+1077,Male,38,Teacher,7.2,3,47,2,Overweight,110/70,90,11631,Insomnia
+1078,Female,34,Doctor,4.9,1,26,10,Overweight,110/70,95,1919,None
+1079,Female,37,Teacher,7.2,2,87,5,Normal,120/80,97,14268,Insomnia
+1080,Male,49,Engineer,5.2,3,14,4,Normal,110/70,69,14938,Sleep Apnea
+1081,Female,51,Teacher,9.1,1,49,2,Overweight,120/80,97,1877,None
+1082,Female,44,Engineer,9.0,5,2,6,Obese,130/90,93,7284,None
+1083,Female,48,Nurse,4.5,1,21,4,Normal,110/70,75,8018,None
+1084,Male,44,Doctor,7.4,3,90,7,Overweight,140/95,83,3824,Insomnia
+1085,Female,20,Teacher,8.6,9,59,2,Obese,130/90,84,8180,None
+1086,Female,48,Scientist,8.2,2,89,6,Obese,130/90,61,14300,Insomnia
+1087,Male,38,Engineer,6.4,3,33,5,Obese,130/90,78,9945,Insomnia
+1088,Female,31,Scientist,7.0,2,10,10,Normal,140/95,80,9156,Sleep Apnea
+1089,Female,33,Scientist,7.1,8,30,1,Overweight,130/90,60,2743,Insomnia
+1090,Female,50,Student,6.5,5,25,2,Normal,140/95,81,11864,None
+1091,Female,21,Student,3.0,3,15,3,Obese,140/95,64,9845,None
+1092,Female,18,Doctor,6.6,3,24,2,Normal,110/70,86,11566,Insomnia
+1093,Male,47,Student,6.4,3,6,5,Overweight,110/70,97,14432,Sleep Apnea
+1094,Female,18,Teacher,5.0,3,25,8,Obese,140/95,74,7592,Insomnia
+1095,Female,24,Teacher,4.6,9,99,5,Overweight,130/90,86,10997,Sleep Apnea
+1096,Male,61,Nurse,7.3,5,55,8,Obese,110/70,91,10128,None
+1097,Female,53,Nurse,7.3,3,43,2,Obese,110/70,80,1932,None
+1098,Male,45,Teacher,7.0,3,14,9,Obese,130/90,60,6758,None
+1099,Female,54,Engineer,4.4,7,71,4,Underweight,110/70,65,9265,Insomnia
+1100,Female,54,Nurse,5.1,4,65,4,Overweight,130/90,77,3174,Sleep Apnea
+1101,Female,34,Engineer,6.5,5,70,5,Overweight,110/70,77,11915,None
+1102,Male,55,Doctor,8.7,2,27,3,Underweight,140/95,89,5409,None
+1103,Male,49,Scientist,5.7,8,80,6,Overweight,140/95,71,6434,None
+1104,Female,42,Engineer,5.1,2,38,6,Obese,110/70,87,1055,Insomnia
+1105,Female,43,Student,7.6,7,52,1,Obese,140/95,61,9343,Sleep Apnea
+1106,Female,26,Doctor,5.2,2,95,1,Obese,140/95,87,4183,Insomnia
+1107,Female,52,Engineer,9.3,4,1,6,Overweight,130/90,80,9181,Insomnia
+1108,Male,34,Student,7.7,7,99,6,Overweight,110/70,85,9050,Sleep Apnea
+1109,Female,27,Scientist,9.1,6,36,4,Overweight,120/80,98,3330,Insomnia
+1110,Male,57,Engineer,7.6,2,20,6,Normal,110/70,94,5515,None
+1111,Female,62,Engineer,6.2,9,50,7,Normal,130/90,80,13765,Sleep Apnea
+1112,Female,51,Teacher,7.7,5,29,4,Overweight,110/70,76,9290,Insomnia
+1113,Female,36,Doctor,7.4,2,54,5,Underweight,110/70,83,2404,Insomnia
+1114,Female,43,Scientist,7.4,8,53,1,Normal,110/70,85,12888,Insomnia
+1115,Female,29,Engineer,7.7,9,2,5,Normal,120/80,75,5370,Sleep Apnea
+1116,Female,27,Scientist,7.6,10,78,3,Underweight,110/70,63,8935,None
+1117,Female,33,Nurse,6.2,4,88,8,Underweight,120/80,95,12289,Sleep Apnea
+1118,Female,31,Student,7.0,8,46,8,Underweight,130/90,75,11675,Insomnia
+1119,Female,41,Engineer,8.3,3,12,1,Obese,110/70,81,4869,Sleep Apnea
+1120,Female,51,Nurse,8.0,3,34,9,Obese,120/80,73,14124,Insomnia
+1121,Male,20,Doctor,8.0,5,96,8,Obese,120/80,69,14264,None
+1122,Female,56,Scientist,6.4,2,96,2,Obese,130/90,68,11384,None
+1123,Male,64,Teacher,6.9,8,14,3,Normal,130/90,81,3465,None
+1124,Female,30,Doctor,4.8,8,1,9,Overweight,130/90,97,6676,None
+1125,Female,63,Nurse,4.8,1,77,9,Obese,130/90,88,8104,Sleep Apnea
+1126,Male,38,Scientist,8.5,8,68,1,Normal,140/95,77,14293,Sleep Apnea
+1127,Male,20,Nurse,5.6,1,27,2,Overweight,140/95,88,4325,Sleep Apnea
+1128,Male,43,Teacher,8.4,6,48,9,Overweight,120/80,98,11846,Sleep Apnea
+1129,Male,57,Engineer,6.6,6,87,3,Overweight,120/80,61,13419,None
+1130,Male,37,Engineer,7.9,10,36,5,Obese,110/70,75,3024,Insomnia
+1131,Female,57,Scientist,6.5,5,83,8,Normal,120/80,85,5339,Sleep Apnea
+1132,Male,50,Nurse,6.0,4,17,3,Obese,130/90,88,5937,None
+1133,Male,22,Student,8.4,10,50,8,Obese,110/70,92,14625,Insomnia
+1134,Female,47,Teacher,8.0,8,25,7,Overweight,120/80,91,11031,Insomnia
+1135,Male,62,Doctor,7.6,1,16,2,Normal,140/95,84,11581,Insomnia
+1136,Male,63,Nurse,9.4,2,94,5,Overweight,110/70,78,10758,None
+1137,Male,36,Teacher,6.3,6,32,5,Obese,130/90,90,5108,None
+1138,Female,58,Engineer,7.4,9,50,4,Normal,110/70,87,6435,Sleep Apnea
+1139,Male,45,Scientist,5.6,8,48,9,Normal,120/80,73,4597,Sleep Apnea
+1140,Female,50,Scientist,8.6,5,18,3,Underweight,140/95,63,4650,Insomnia

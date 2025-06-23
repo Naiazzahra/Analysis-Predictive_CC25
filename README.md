@@ -10,12 +10,14 @@ Namun, banyak orang kesulitan mengidentifikasi faktor spesifik dari gaya hidup m
 
 ### Referensi 
 [1] Walker, M. P. (2017). Why We Sleep: Unlocking the Power of Sleep and Dreams. Scribner.
+
 [2] National Sleep Foundation. (2020). Sleep Health Index. Diakses dari https://www.sleepfoundation.org/ (Perhatikan: tautan ini adalah contoh umum dan mungkin tidak mengarah langsung ke "Sleep Health Index" tertentu, perlu dicari referensi spesifik).
 
 ## Business Understanding
-
+Proyek ini berfokus pada analisis data terkait pola tidur dan gaya hidup, dengan tujuan utama untuk memahami faktor-faktor yang memengaruhi kualitas tidur seseorang dan memprediksi apakah kualitas tidur tersebut termasuk kategori "Baik" atau "Buruk". Pemahaman ini memiliki implikasi bisnis dan kesehatan yang signifikan di berbagai sektor.
 
 ### Problem Statements
+Dari latar belakang tersebut, terdapat beberapa rumusan masalah seperti berikut :
 - Kesulitan Individu dalam Mengidentifikasi Kualitas Tidur Mereka Sendiri.
   Banyak individu tidak menyadari bahwa mereka memiliki kualitas tidur yang buruk atau berada pada risiko tinggi mengalami masalah tidur. Gejala-gejala seperti kelelahan kronis atau penurunan konsentrasi seringkali dianggap normal, padahal dapat menjadi indikator kualitas tidur yang rendah.
 
@@ -23,8 +25,7 @@ Namun, banyak orang kesulitan mengidentifikasi faktor spesifik dari gaya hidup m
   Meskipun banyak yang mengakui pentingnya tidur, tidak semua individu memahami bagaimana kebiasaan sehari-hari mereka (misalnya, tingkat aktivitas, stres, pola makan) secara langsung memengaruhi kualitas tidur mereka. Hal ini menghambat upaya pencegahan dan perbaikan kualitas tidur.
 
 ### Goals
-
-Menjelaskan tujuan dari pernyataan masalah:
+Tujuan yang didapat dari rumusan masalah adalah sebagai berikut:
 - Membangun model klasifikasi yang mampu memprediksi kualitas tidur seseorang ke dalam kategori "Baik" atau "Buruk" berdasarkan faktor gaya hidup.
   
   Model ini akan membantu individu mendapatkan gambaran awal tentang kualitas tidur mereka tanpa perlu intervensi medis yang kompleks.
@@ -35,6 +36,7 @@ Menjelaskan tujuan dari pernyataan masalah:
 ## Data Understanding
 Dataset yang digunakan dalam proyek ini adalah Sleep Health and Lifestyle Dataset yang tersedia di Kaggle. Dataset ini berisikan informasi mengenai berbagai faktor gaya hidup dan kesehatan yang relevan dengan kualitas tidur.
 [Sumber Datase -- Kaggle ] : (https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset).
+Dataset dipilih berdasar
 
 ### Variabel-variabel pada dataset adalah sebagai berikut:
 - Variabel-variabel pada Sleep Health and Lifestyle Dataset adalah sebagai berikut:
@@ -64,13 +66,13 @@ Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan m
 - Boxplot Fitur Numerik
   
   *![BoxPlot Numeric](images/boxplot_numeric.png)*
-- Boxplot untuk Age :Mayoritas individu memiliki usia antara 35 hingga 50 tahun, dengan median 40-42 tahun. Pada distribusi usia tampak cukup merata
-- Boxplot untuk Sleep DUration : Mayoritas tidur antara 6.2 - 6.5 hingga 7.8 - 8 jam perhari, dengan median sekita 7 - 7.2 jam.
-- Boxplot untuk Physical Activity Level : Mayoritas individu dalam dataset melakukan aktivitas fisik harian antara 45 hingga 70-75 menit, dengan median sekitar 55-60 menit. Distribusi aktivitas fisik tampak merata dan tidak memiliki outlier
-- Boxplot untuk Stress Level : Mayoritas individu dalam dataset melaporkan tingkat stres antara 4 hingga 7, dengan median sekitar 5. Kotak terlihat cukup simetris, dan median berada di tengah kotak, mengindikasikan distribusi tingkat stres yang relatif simetris atau mendekati normal. Distribusi tingkat stres tampak merata dan tidak memiliki pencilan ekstrem.
-- Boxplot untuk Heart Rate : Mayoritas indivisu memiliki denyut jantung di kisaran 68-72bpm. Namun, ada beberapa individu yang memiliki denyut jantung jauh di atas rata-rata (80-85 bpm). Pada bagian kanan (atas) kotak sedikit lebih panjang dari bagian kiri, dan ada outlier di sisi kanan. Ini mengindikasikan adanya kemiringan positif (right-skewed) pada distribusi Heart Rate, meskipun tidak terlalu ekstrem. Artinya, ada ekor data yang lebih panjang ke arah nilai yang lebih tinggi, yang diwakili oleh outlier tersebut.
-- Boxplot untuk Distribusi : Mayoritas individu dalam dataset mengambil langkah harian antara 5500-6000 hingga 7500-8000 langkah, dengan median sekitar 6500-7000 langkah. Distribusi langkah harian tampak cukup merata dan tidak memiliki outlier.
-
+- Boxplot 'Age' :  Mayoritas individu dalam dataset memiliki usia antara 36 hingga 50 tahun, dengan median sekitar 41-42 tahun. Kotak terlihat cukup simetris, dan median berada di tengah kotak. Whiskers juga tampak relatif simetris. Ini mengindikasikan distribusi usia yang mendekati simetris atau normal. Rentang usia yang dicakup oleh data terlihat cukup luas, dari sekitar 27 hingga 60 tahun. Tidak terdapat outlier
+- Boxplot 'Sleep Duration' : Mayoritas individu dalam dataset tidur antara 6.5 hingga 7.8-8.0 jam per hari, dengan median sekitar 7.2-7.3 jam. Namun, terdapat sejumlah kecil individu dengan durasi tidur yang sangat rendah (sekitar 3-4.5 jam) yang teridentifikasi sebagai outlier. Terdapat juga beberapa outlier di sisi atas (durasi tidur sangat tinggi). Distribusi secara keseluruhan sedikit miring ke kiri karena adanya outlier di sisi bawah.
+- Boxplot 'Physical Activity Level' : Mayoritas individu dalam dataset melakukan aktivitas fisik harian antara 45 hingga 70-75 menit, dengan median sekitar 55-60 menit. Distribusi aktivitas fisik tampak merata dan tidak memiliki outlier.
+- Bloxplot 'Stress Level' : ayoritas individu dalam dataset melaporkan tingkat stres antara 4 hingga 7, dengan median sekitar 5. Distribusi tingkat stres tampak merata dan tidak memiliki outlier yang ekstrem.
+- Boxplot 'Heart Rate' : Mayoritas individu memiliki denyut jantung di kisaran 68-73 bpm. Namun, ada beberapa individu yang memiliki denyut jantung jauh di atas rata-rata (85-100 bpm), yang diidentifikasi sebagai outlier. Distribusi Heart Rate miring ke kanan.
+- Boxplot 'Daily Steps' : Terdapat beberapa titik individual yang ditampilkan di sisi kiri (bawah) boxplot, di sekitar 1000-2000 langkah. Ini adalah (outliers) yang menunjukkan adanya beberapa individu dengan langkah harian yang sangat rendah. Selain itu, ada juga beberapa outlier di sisi kanan (atas) boxplot, di sekitar 12000-14000 langkah, menunjukkan beberapa individu yang sangat aktif.
+- Boxplot 'Quality of Sleep' : Terdapat beberapa titik individual yang ditampilkan di sisi kiri (bawah) boxplot, di sekitar 1.0 hingga 2.0. Ini adalah pencilan (outliers) yang menunjukkan adanya beberapa individu dengan kualitas tidur yang sangat rendah. Tidak ada outlier di sisi kanan. Mayoritas individu dalam dataset memiliki kualitas tidur yang cukup baik, antara 6 hingga 8, dengan median sekitar 7-8 jam
 
   *- Heatmap*
   *![Matrik Korelasi Fitur Numerik](images/heatmap.png)*
@@ -129,7 +131,6 @@ Tahap evaluasi sangat penting untuk mengukur seberapa baik model yang telah dila
   - Cara Kerja: Menghitung seberapa sering model membuat prediksi yang tepat dibandingkan dengan total jumlah data.
   - Memberikan gambaran umum seberapa sering model kita memprediksi kualitas tidur dengan benar (baik yang 'Baik' maupun yang 'Buruk').
   
-
 2. Presisi (Precision)
   - Presisi mengukur proporsi kasus positif yang diprediksi dengan benar dari semua kasus yang diprediksi sebagai positif. Ini relevan ketika biaya kesalahan false positive (mengatakan 'Baik' padahal 'Buruk') adalah tinggi. 
   - Cara Kerja: Menjawab pertanyaan: "Dari semua individu yang model prediksi memiliki kualitas tidur 'Baik', berapa banyak yang benar-benar memiliki kualitas tidur 'Baik'?"
@@ -150,18 +151,18 @@ Tahap evaluasi sangat penting untuk mengukur seberapa baik model yang telah dila
 ### Hasil Proyek Berdasarkan Metrik Evaluasi
 #### 📊 Evaluasi Model Random Forest Terbaik (Tuned)
 
-**Akurasi: 1.0000**
+**Akurasi: 0.9223**
 
 | Kelas  | Precision | Recall | F1-Score | Support |
 |--------|-----------|--------|----------|---------|
-| Bad    | 1.00      | 1.00   | 1.00     | 39      |
-| Good   | 1.00      | 1.00   | 1.00     | 36      |
+| Bad    | 0.88      | 1.00   | 0.94     | 61      |
+| Good   | 1.00      | 0.81   | 0.89     | 42      |
 
 |        | Precision | Recall | F1-Score | Support |
 |--------|-----------|--------|----------|---------|
-| Accuracy   |         |        | **1.00**     | 75      |
-| Macro avg  | 1.00      | 1.00   | 1.00     | 75      |
-| Weighted avg | 1.00    | 1.00   | 1.00     | 75      |
+| Accuracy   |         |        | **0.92**     | 103      |
+| Macro avg  | 0.94      | 0.90   | 0.92     | 103      |
+| Weighted avg | 0.93    | 0.92   | 0.92     | 103      |
 
 
 **Confusion Matrik :**
@@ -170,12 +171,25 @@ Tahap evaluasi sangat penting untuk mengukur seberapa baik model yang telah dila
 
 *Penjelasan :*
 1. Accuracy
-   - Akurasi 1.0000 atau 100% menunjukkan bahwa model Random Forest yang telah di-tuning berhasil memprediksi seluruh sampel di dataset pengujian dengan benar. Tidak ada satu pun kesalahan prediksi yang dilakukan oleh model ini pada data pengujian.
+   - Akurasi 0.9223 atau sekitar 92.23% menunjukkan bahwa model Random Forest yang telah di-tuning berhasil memprediksi sebagian besar sampel di dataset pengujian dengan benar. Ini adalah kinerja yang sangat baik, menunjukkan bahwa model memiliki kemampuan generalisasi yang tinggi untuk data baru.
 2. Classification report
-   -  presisi 1.00, recall 1.00, dan F1-score 1.00 untuk kedua kelas ('Bad' dan 'Good')
+   - Kelas 'Bad'
+      - Precision (0.88): Dari semua sampel yang diprediksi sebagai 'Bad', 88% di antaranya benar-benar 'Bad'. Ini berarti ada beberapa kasus 'Good' yang salah diprediksi sebagai 'Bad' (False Positives untuk kelas 'Bad').
+      - Recall (1.00): Dari semua sampel yang sebenarnya 'Bad', 100% di antaranya berhasil diprediksi sebagai 'Bad'. Ini berarti model berhasil mengidentifikasi semua kasus 'Bad' yang sebenarnya tanpa ada yang terlewat (tidak ada False Negatives untuk kelas 'Bad').
+      - F1-Score (0.94): Nilai F1-score 0.94 menunjukkan keseimbangan yang sangat baik antara Precision dan Recall untuk kelas 'Bad'.
+      - Support (61): Terdapat 61 sampel dengan kelas aktual 'Bad' di dataset pengujian.
+
+
+   - Kelas 'Good'
+       - Precision (1.00): Dari semua sampel yang diprediksi sebagai 'Good', 100% di antaranya benar-benar 'Good'. Ini berarti tidak ada 'Bad' yang salah diprediksi sebagai 'Good' (tidak ada False Positives untuk kelas 'Good').
+       - Recall (0.81): Dari semua sampel yang sebenarnya 'Good', 81% di antaranya berhasil diprediksi sebagai 'Good'. Ini berarti ada 19% kasus 'Good' yang terlewat dan salah diprediksi sebagai 'Bad' (False Negatives untuk kelas 'Good').
+       - F1-Score (0.89): Nilai F1-score 0.89 menunjukkan kinerja yang baik, namun sedikit lebih rendah dari kelas 'Bad' karena recall yang lebih rendah.
+       - Support (42): Terdapat 42 sampel dengan kelas aktual 'Good' di dataset pengujian.
+
+
 3. Confusion Matrik
-  - **True Negatives (TN) = 39:** Model dengan benar memprediksi 39 kasus dengan kualitas tidur 'Bad'.
-  - **False Positives (FP) = 0:** Model tidak salah memprediksi kualitas tidur 'Bad' sebagai 'Good'.
-  - **False Negatives (FN) = 0:** Model tidak salah memprediksi kualitas tidur 'Good' sebagai 'Bad'.
-  - **True Positives (TP) = 36:** Model dengan benar memprediksi 36 kasus dengan kualitas tidur 'Good'.
+  - True Negatives (TN) = 61: Ini adalah jumlah kasus di mana kualitas tidur aktualnya adalah 'Bad' dan model memprediksi 'Bad'. Ini adalah prediksi yang benar.
+  - False Positives (FP) = 0: Ini adalah jumlah kasus di mana kualitas tidur aktualnya adalah 'Good' tetapi model memprediksi 'Bad'. Dalam konteks kelas 'Bad', ini berarti tidak ada 'Good' yang salah diklasifikasikan sebagai 'Bad'.
+  - False Negatives (FN) = 8: Ini adalah jumlah kasus di mana kualitas tidur aktualnya adalah 'Good' tetapi model memprediksi 'Bad'. Ini berarti ada 8 kasus tidur 'Good' yang terlewat dan salah diklasifikasikan sebagai 'Bad'.
+  - True Positives (TP) = 34: Ini adalah jumlah kasus di mana kualitas tidur aktualnya adalah 'Good' dan model memprediksi 'Good'. Ini adalah prediksi yang benar.
 
