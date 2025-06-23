@@ -103,12 +103,66 @@ Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan m
 Tahap pemodelan melibatkan pemilihan, pelatihan, dan pengoptimalan algoritma machine learning untuk memprediksi kualitas tidur. Dalam proyek ini, kami akan menggunakan dua algoritma klasifikasi utama untuk perbandingan: Random Forest Classifier dan Decision Tree Classifier, serta K-Nearest Neighbors sebagai pembanding tambahan.
 
 **Pemilihan Algoritma**: 
-- Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-- Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. **Jelaskan proses improvement yang dilakukan**.
-- Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**.
-
+1. Random Forest Classifier
+   a. Kelebihan
+    - Biasanya memberikan performa yang baik sehingga menghasilkan akurasi yang tinggi.
+    - Karena menggabungkan banyak decision tree yang dilatih secara independen, Random Forest cenderung tidak overfit.
+    -  Efektif dengan fitur numerik dan kategorikal (setelah di-encode).
+    -  apat mengukur kontribusi relatif dari setiap fitur terhadap prediksi.
+   b. Kekurangan
+    - Modelnya seperti "kotak hitam" karena melibatkan banyak pohon keputusan, sehingga sulit untuk menelusuri logika keputusan tunggal.
+    - Membutuhkan lebih banyak sumber daya komputasi dan waktu untuk melatih dibandingkan dengan decision tree tunggal.
+2. Pelatihan Model dan Hyperparameter Tuning
+   - Untuk Random Forest, kita akan memulai dengan jumlah estimasi default (misalnya, 100 pohon).
+   - Setiap model akan dilatih menggunakan data pelatihan (X_train dan y_train).
+   - pada hyperparameter tuning untuk Random Forest karena ia adalah model yang kuat dan berkinerja tinggi. Teknik GridSearchCV akan digunakan untuk mencari kombinasi hyperparameter terbaik seperti n_estimators (jumlah pohon), max_depth (kedalaman maksimum pohon), dan min_samples_split (jumlah sampel minimum yang diperlukan untuk membagi node).
+   - Proses Improvement: GridSearchCV akan melakukan pencarian exhaustif di atas grid parameter yang ditentukan, melatih dan mengevaluasi model untuk setiap kombinasi menggunakan validasi silang (cross-validation). Model terbaik dari GridSearchCV akan dipilih sebagai model final.
+  
 ## Evaluation
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
+Tahap evaluasi sangat penting untuk mengukur seberapa baik model yang telah dilatih dapat memprediksi kualitas tidur pada data yang belum pernah dilihat sebelumnya. Metrik evaluasi yang digunakan harus sesuai dengan masalah klasifikasi, yaitu Akurasi, Presisi, Recall, dan F1-Score.
+
+
+### Metrik Evaluasi yang Digunakan :
+1. Akurasi (Accuracy)
+
+  - Akurasi mengukur proporsi total prediksi yang benar dari seluruh prediksi yang dilakukan. Ini adalah metrik paling sederhana dan intuitif.
+  - Cara Kerja: Menghitung seberapa sering model membuat prediksi yang tepat dibandingkan dengan total jumlah data.
+  - Memberikan gambaran umum seberapa sering model kita memprediksi kualitas tidur dengan benar (baik yang 'Baik' maupun yang 'Buruk').
+  
+
+2. Presisi (Precision)
+  - Presisi mengukur proporsi kasus positif yang diprediksi dengan benar dari semua kasus yang diprediksi sebagai positif. Ini relevan ketika biaya kesalahan false positive (mengatakan 'Baik' padahal 'Buruk') adalah tinggi. 
+  - Cara Kerja: Menjawab pertanyaan: "Dari semua individu yang model prediksi memiliki kualitas tidur 'Baik', berapa banyak yang benar-benar memiliki kualitas tidur 'Baik'?"
+  - Memastikan bahwa ketika model menyatakan seseorang memiliki tidur 'Baik', ia memang benar-benar 'Baik', menghindari saran yang keliru.
+
+3. Recall (Sensitivitas / True Positive Rate)
+  - Recall mengukur proporsi kasus positif aktual yang diprediksi dengan benar dari semua kasus yang sebenarnya positif. Ini penting ketika biaya kesalahan false negative (mengatakan 'Buruk' padahal 'Baik') adalah tinggi. 
+  - Cara Kerja: Menjawab pertanyaan: "Dari semua individu yang sebenarnya memiliki kualitas tidur 'Baik', berapa banyak yang berhasil dideteksi oleh model sebagai 'Baik'?"
+  - Memastikan model kita dapat mengidentifikasi sebanyak mungkin individu dengan kualitas tidur 'Baik' agar tidak salah diklasifikasikan sebagai 'Buruk'.
+
+4. F1-Score
+
+  - F1-Score adalah rata-rata harmonik dari Presisi dan Recall. Ini adalah metrik yang lebih seimbang, terutama berguna ketika ada ketidakseimbangan kelas atau ketika kita ingin menyeimbangkan trade-off antara Presisi dan Recall.
+  - Cara Kerja: Memberikan skor tunggal yang mempertimbangkan baik false positives maupun false negatives. Nilai F1-Score yang tinggi menunjukkan bahwa model memiliki Presisi dan Recall yang baik.
+  - Memberikan gambaran komprehensif tentang kinerja model, terutama karena kita memiliki dua kelas dan ingin model berkinerja baik di kedua sisi.
+
+
+### Hasil Proyek Berdasarkan Metrik Evaluasi
+#### 📊 Evaluasi Model Random Forest Terbaik (Tuned)
+
+**Akurasi: 1.0000**
+
+| Kelas  | Precision | Recall | F1-Score | Support |
+|--------|-----------|--------|----------|---------|
+| Bad    | 1.00      | 1.00   | 1.00     | 39      |
+| Good   | 1.00      | 1.00   | 1.00     | 36      |
+
+|        | Precision | Recall | F1-Score | Support |
+|--------|-----------|--------|----------|---------|
+| Accuracy   |         |        | **1.00**     | 75      |
+| Macro avg  | 1.00      | 1.00   | 1.00     | 75      |
+| Weighted avg | 1.00    | 1.00   | 1.00     | 75      |
+
 
 Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
 - Penjelasan mengenai metrik yang digunakan
