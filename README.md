@@ -60,6 +60,15 @@ Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan m
 ![Distribusi Kualitas Tidur](images/dis_kualitas_tidur.png)
 - Penjelasan : Visualisasi ini menunjukkan sebaran frekuensi setiap skor dari 'Quality of Sleep'. Pada distribusi terdapat ambang batas nilai individu yaitu berada pada rentang 4 - 9 jam waktu tidur pada masing-masing individu.
 
+- - Boxplot Fitur Numerik
+- ![BoxPlot Numeric](images/boxplot_numeric.png)
+- Boxplot untuk Age :Mayoritas individu memiliki usia antara 35 hingga 50 tahun, dengan median 40-42 tahun. Pada distribusi usia tampak cukup merata
+- Boxplot untuk Sleep DUration : Mayoritas tidur antara 6.2 - 6.5 hingga 7.8 - 8 jam perhari, dengan median sekita 7 - 7.2 jam.
+- Boxplot untuk Physical Activity Level : Mayoritas individu dalam dataset melakukan aktivitas fisik harian antara 45 hingga 70-75 menit, dengan median sekitar 55-60 menit. Distribusi aktivitas fisik tampak merata dan tidak memiliki outlier
+- Boxplot untuk Stress Level : Mayoritas individu dalam dataset melaporkan tingkat stres antara 4 hingga 7, dengan median sekitar 5. Kotak terlihat cukup simetris, dan median berada di tengah kotak, mengindikasikan distribusi tingkat stres yang relatif simetris atau mendekati normal. Distribusi tingkat stres tampak merata dan tidak memiliki pencilan ekstrem.
+- Boxplot untuk Heart Rate : Mayoritas indivisu memiliki denyut jantung di kisaran 68-72bpm. Namun, ada beberapa individu yang memiliki denyut jantung jauh di atas rata-rata (80-85 bpm). Pada bagian kanan (atas) kotak sedikit lebih panjang dari bagian kiri, dan ada outlier di sisi kanan. Ini mengindikasikan adanya kemiringan positif (right-skewed) pada distribusi Heart Rate, meskipun tidak terlalu ekstrem. Artinya, ada ekor data yang lebih panjang ke arah nilai yang lebih tinggi, yang diwakili oleh outlier tersebut.
+- Boxplot untuk Distribusi : Mayoritas individu dalam dataset mengambil langkah harian antara 5500-6000 hingga 7500-8000 langkah, dengan median sekitar 6500-7000 langkah. Distribusi langkah harian tampak cukup merata dan tidak memiliki outlier.
+
 - Penangan Kolom 'Person ID'
   Mendrop/menghilangkan kolom 'person ID' dengan menggunakan .dropna()
 - Penanganan Nilai Hilang pada 'Sleep Disorder'
