@@ -56,8 +56,8 @@ Dataset yang digunakan dalam proyek ini adalah Sleep Health and Lifestyle Datase
 ## Data Preparation
 Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan machine learning. Teknik-teknik yang diterapkan di sini mengikuti urutan logis untuk membersihkan, mengubah, dan menyiapkan fitur.
 
-- Distribusi Kualitas Tidur\
-- ![Distribusi Kualitas Tidur](images/dis_kualitas_tidur.png)
+- Distribusi Kualitas Tidur
+![Distribusi Kualitas Tidur](images/dis_kualitas_tidur.png)
 - Penjelasan : Visualisasi ini menunjukkan sebaran frekuensi setiap skor dari 'Quality of Sleep'. Pada distribusi terdapat ambang batas nilai individu yaitu berada pada rentang 4 - 9 jam waktu tidur pada masing-masing individu.
 
 - Penangan Kolom 'Person ID'
