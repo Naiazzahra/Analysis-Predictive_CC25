@@ -164,18 +164,18 @@ Tahap evaluasi sangat penting untuk mengukur seberapa baik model yang telah dila
 | Weighted avg | 1.00    | 1.00   | 1.00     | 75      |
 
 
-Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
-- Penjelasan mengenai metrik yang digunakan
-- Menjelaskan hasil proyek berdasarkan metrik evaluasi
+**Confusion Matrik :**
 
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
+![Confusion Matrik](images/rf_tuned.png)
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
-
-**---Ini adalah bagian akhir laporan---**
-
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
+*Penjelasan :*
+1. Accuracy
+   - Akurasi 1.0000 atau 100% menunjukkan bahwa model Random Forest yang telah di-tuning berhasil memprediksi seluruh sampel di dataset pengujian dengan benar. Tidak ada satu pun kesalahan prediksi yang dilakukan oleh model ini pada data pengujian.
+2. Classification report
+   -  presisi 1.00, recall 1.00, dan F1-score 1.00 untuk kedua kelas ('Bad' dan 'Good')
+3. Confusion Matrik
+  - **True Negatives (TN) = 39:** Model dengan benar memprediksi 39 kasus dengan kualitas tidur 'Bad'.
+  - **False Positives (FP) = 0:** Model tidak salah memprediksi kualitas tidur 'Bad' sebagai 'Good'.
+  - **False Negatives (FN) = 0:** Model tidak salah memprediksi kualitas tidur 'Good' sebagai 'Bad'.
+  - **True Positives (TP) = 36:** Model dengan benar memprediksi 36 kasus dengan kualitas tidur 'Good'.
 
