@@ -70,7 +70,9 @@ Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan m
 - Boxplot untuk Stress Level : Mayoritas individu dalam dataset melaporkan tingkat stres antara 4 hingga 7, dengan median sekitar 5. Kotak terlihat cukup simetris, dan median berada di tengah kotak, mengindikasikan distribusi tingkat stres yang relatif simetris atau mendekati normal. Distribusi tingkat stres tampak merata dan tidak memiliki pencilan ekstrem.
 - Boxplot untuk Heart Rate : Mayoritas indivisu memiliki denyut jantung di kisaran 68-72bpm. Namun, ada beberapa individu yang memiliki denyut jantung jauh di atas rata-rata (80-85 bpm). Pada bagian kanan (atas) kotak sedikit lebih panjang dari bagian kiri, dan ada outlier di sisi kanan. Ini mengindikasikan adanya kemiringan positif (right-skewed) pada distribusi Heart Rate, meskipun tidak terlalu ekstrem. Artinya, ada ekor data yang lebih panjang ke arah nilai yang lebih tinggi, yang diwakili oleh outlier tersebut.
 - Boxplot untuk Distribusi : Mayoritas individu dalam dataset mengambil langkah harian antara 5500-6000 hingga 7500-8000 langkah, dengan median sekitar 6500-7000 langkah. Distribusi langkah harian tampak cukup merata dan tidak memiliki outlier.
-  
+
+
+  *- Heatmap*
   *![Matrik Korelasi Fitur Numerik](images/heatmap.png)*
   *Penjelasan : (Heatmap Matrik)*
 - Durasi Tidur dan Kualitas Tidur (0.88): Ada korelasi positif yang sangat kuat. Ini menunjukkan bahwa durasi tidur yang lebih lama sangat terkait dengan kualitas tidur yang lebih tinggi, yang masuk akal secara intuitif.
@@ -80,15 +82,16 @@ Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan m
 - Tingkat Stres dan Detak Jantung (0.67): Korelasi positif yang cukup kuat. Tingkat stres yang lebih tinggi sering dikaitkan dengan peningkatan detak jantung.
 - Usia dan Durasi Tidur (0.34): Korelasi positif yang lemah. Ini menunjukkan sedikit kecenderungan bagi individu yang lebih tua untuk memiliki durasi tidur yang lebih lama, tetapi itu bukan hubungan yang kuat.
 - Langkah Harian dan Kualitas Tidur (0.02): Korelasi positif yang sangat lemah, hampir dapat diabaikan. Ini menyiratkan bahwa jumlah langkah harian memiliki sedikit atau tidak ada hubungan linier dengan kualitas tidur berdasarkan data ini.
-- Penangan Kolom 'Person ID'
-  Mendrop/menghilangkan kolom 'person ID' dengan menggunakan .dropna()
-- Penanganan Nilai Hilang pada 'Sleep Disorder'
-  pada kolom 'Sleep Disorder' terdapat 3 nilai yaitu (NaN, Insomnia, dan Sleep Anea). Nilai NaN akan diisi dengan kategori (No Disorder).
-- 
 
 **Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+- Penangan Kolom 'Person ID'
+  Mendrop/menghilangkan kolom 'person ID' dengan menggunakan .dropna(). Person ID adalah pengenal unik untuk setiap entri dan tidak memiliki nilai prediktif terhadap kualitas tidur. Jika dimasukkan dalam model, ini dapat menyebabkan overfitting dan tidak memberikan wawasan umum.
+  
+- Penanganan Nilai Hilang pada 'Sleep Disorder'
+  Pada kolom 'Sleep Disorder' terdapat 3 nilai yaitu (NaN, Insomnia, dan Sleep Anea). Nilai NaN akan diisi dengan kategori (No Disorder). Karena kalau mengisi dengan modus bisa menyesatkan jika modus adalah salah satu jenis gangguan tidur. Pendekatan ini mempertahankan sebagian besar data dan menciptakan kategori yang relevan.
+  
+- Penguraian dan Penanganan Kolom Blood Pressure
+   Kolom Blood Pressure memiliki format string "sistolik/diastolik" (misalnya, "120/80"). Ini akan dipecah menjadi dua kolom numerik terpisah: Systolic BP dan Diastolic BP.. Model machine learning tidak dapat langsung memproses format string "120/80". Memisahkan menjadi dua fitur numerik memungkinkan model untuk belajar dari kedua komponen tekanan darah secara independen
 
 ## Modeling
 Tahap pemodelan melibatkan pemilihan, pelatihan, dan pengoptimalan algoritma machine learning untuk memprediksi kualitas tidur. Dalam proyek ini, kami akan menggunakan dua algoritma klasifikasi utama untuk perbandingan: Random Forest Classifier dan Decision Tree Classifier, serta K-Nearest Neighbors sebagai pembanding tambahan.
