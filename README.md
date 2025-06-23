@@ -1,5 +1,5 @@
 # Laporan Proyek Machine Learning - Naia Az - Zahra MC132D5X1884
-## Prediksi Kualitas Tiudr Berdasarkan Faktor Gaya Hiduo
+## Prediksi Kualitas Tidur Berdasarkan Faktor Gaya Hidup
 
 ## Domain Proyek
 ### Latar Belakang
@@ -92,6 +92,12 @@ Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan m
   
 - Penguraian dan Penanganan Kolom Blood Pressure
    Kolom Blood Pressure memiliki format string "sistolik/diastolik" (misalnya, "120/80"). Ini akan dipecah menjadi dua kolom numerik terpisah: Systolic BP dan Diastolic BP.. Model machine learning tidak dapat langsung memproses format string "120/80". Memisahkan menjadi dua fitur numerik memungkinkan model untuk belajar dari kedua komponen tekanan darah secara independen
+
+- Kategorisasi Variabel Target Quality of Sleep
+   mbang batas akan ditetapkan berdasarkan distribusi data yang diamati pada tahap EDA (misalnya, skor &lt;= 6 untuk 'Buruk' dan skor > 6 untuk 'Baik'). Kemudian, label kategorikal ini akan diubah menjadi representasi numerik (misalnya, 0 untuk 'Buruk', 1 untuk 'Baik') menggunakan LabelEncoder. Proyek ini berfokus pada masalah klasifikasi biner untuk menyederhanakan interpretasi hasil dan menyediakan alat screening yang jelas. Mengubah skor kontinu menjadi kategori diskrit membuatnya sesuai untuk algoritma klasifikasi.
+
+- Pembagian Data Training dan Testing
+  Dataset akan dibagi menjadi set pelatihan (misalnya, 80%) dan set pengujian (20%) menggunakan train_test_split. Parameter stratify=y akan digunakan. Pembagian data ini memastikan bahwa model dilatih pada satu subset data dan dievaluasi pada subset lain yang tidak pernah dilihat sebelumnya, memberikan estimasi kinerja model yang lebih realistis pada data baru. stratify=y penting untuk memastikan distribusi kelas target (Quality of Sleep) proporsional di kedua set, terutama jika ada ketidakseimbangan kelas.
 
 ## Modeling
 Tahap pemodelan melibatkan pemilihan, pelatihan, dan pengoptimalan algoritma machine learning untuk memprediksi kualitas tidur. Dalam proyek ini, kami akan menggunakan dua algoritma klasifikasi utama untuk perbandingan: Random Forest Classifier dan Decision Tree Classifier, serta K-Nearest Neighbors sebagai pembanding tambahan.
