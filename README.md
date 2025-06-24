@@ -97,10 +97,7 @@ Ada juga beberapa outlier di sisi atas (kanan) distribusi, di sekitar 10.0 jam.
   Keberadaan outlier ini mengindikasikan adanya nilai-nilai ekstrem yang mungkin perlu ditinjau lebih lanjut pada tahap pra-pemrosesan data. Penanganan outlier yang tepat dapat membantu meningkatkan performa model.
 
 
-## Data Preparation
-Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan machine learning. Teknik-teknik yang diterapkan di sini mengikuti urutan logis untuk membersihkan, mengubah, dan menyiapkan fitur.
-
-- Distribusi Kualitas Tidur
+  - Distribusi Kualitas Tidur
   
   *![Distribusi Kualitas Tidur](images/dis_kualitas_tidur.png)*
 - Penjelasan : Visualisasi ini menunjukkan sebaran frekuensi setiap skor dari 'Quality of Sleep'. Pada distribusi terdapat ambang batas nilai individu yaitu berada pada rentang 4 - 9 jam waktu tidur pada masing-masing individu.
@@ -127,7 +124,10 @@ Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan m
 - Usia dan Durasi Tidur (0.34): Korelasi positif yang lemah. Ini menunjukkan sedikit kecenderungan bagi individu yang lebih tua untuk memiliki durasi tidur yang lebih lama, tetapi itu bukan hubungan yang kuat.
 - Langkah Harian dan Kualitas Tidur (0.02): Korelasi positif yang sangat lemah, hampir dapat diabaikan. Ini menyiratkan bahwa jumlah langkah harian memiliki sedikit atau tidak ada hubungan linier dengan kualitas tidur berdasarkan data ini.
 
- **Teknik Yang digunakan pada Data Preparation :**
+
+## Data Preparation
+Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan machine learning. Teknik-teknik yang diterapkan di sini mengikuti urutan logis untuk membersihkan, mengubah, dan menyiapkan fitur.
+
 - Penangan Kolom 'Person ID'
   Mendrop/menghilangkan kolom 'person ID' dengan menggunakan .dropna(). Person ID adalah pengenal unik untuk setiap entri dan tidak memiliki nilai prediktif terhadap kualitas tidur. Jika dimasukkan dalam model, ini dapat menyebabkan overfitting dan tidak memberikan wawasan umum.
   
