@@ -60,7 +60,9 @@ Dataset dipilih berdasar
      - Jumlah kolom : 13
    - Missing Values 
   
-      Terdapat nilai hilang terdeteksi pada kolom 'Sleep Disorder'
+      - Terdapat nilai hilang terdeteksi pada kolom 'Sleep Disorder'
+
+
       ![Jumlah Missing Values](images/jumlah_missing_values.png)
 
   - Jumlah Duplikat
