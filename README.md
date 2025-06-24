@@ -61,21 +61,21 @@ Dataset dipilih berdasar
    - Missing Values 
   
       Terdapat nilai hilang terdeteksi pada kolom 'Sleep Disorder'
-      | Kolom | Jumlah Nilai Hilang | Persentase Nilai Hilang (%) |
-      | :------------------------- | :-------------------------- |
-      | Sleep Disorder | 270 |
-      | Person ID | 0 |
-      | Gender | 0 |
-      | Age | 0 |
-      | Occupation | 0 |
-      | Sleep Duration | 0 |
-      | Quality of Sleep | 0 |
-      | Physical Activity Level | 0 |
-      | Stress Level | 0 |
-      | BMI Category | 0 |
-      | Blood Pressure | 0 |
-      | Heart Rate | 0 |
-      | Daily Steps | 0 |
+| Kolom | Jumlah Nilai Hilang |
+| :------------------------- | :-------------------------- |
+| Sleep Disorder | 270 |
+| Person ID | 0 |
+| Gender | 0 |
+| Age | 0 |
+| Occupation | 0 |
+| Sleep Duration | 0 |
+| Quality of Sleep | 0 |
+| Physical Activity Level | 0 |
+| Stress Level | 0 |
+| BMI Category | 0 |
+| Blood Pressure | 0 |
+| Heart Rate | 0 |
+| Daily Steps | 0 |
 
 
   - Jumlah Duplikat
@@ -109,7 +109,7 @@ Ada juga beberapa outlier di sisi atas (kanan) distribusi, di sekitar 10.0 jam.
   
   Keberadaan outlier ini mengindikasikan adanya nilai-nilai ekstrem yang mungkin perlu ditinjau lebih lanjut pada tahap pra-pemrosesan data. Penanganan outlier yang tepat dapat membantu meningkatkan performa model.
 
-  
+
 ## Data Preparation
 Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan machine learning. Teknik-teknik yang diterapkan di sini mengikuti urutan logis untuk membersihkan, mengubah, dan menyiapkan fitur.
 
