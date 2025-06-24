@@ -148,14 +148,20 @@ Tahap pemodelan melibatkan pemilihan, pelatihan, dan pengoptimalan algoritma mac
 
 **Pemilihan Algoritma**: 
 1. Random Forest Classifier
+   
    a. Kelebihan
+
     - Biasanya memberikan performa yang baik sehingga menghasilkan akurasi yang tinggi.
     - Karena menggabungkan banyak decision tree yang dilatih secara independen, Random Forest cenderung tidak overfit.
     -  Efektif dengan fitur numerik dan kategorikal (setelah di-encode).
     -  apat mengukur kontribusi relatif dari setiap fitur terhadap prediksi.
+  
+
    b. Kekurangan
+
     - Modelnya seperti "kotak hitam" karena melibatkan banyak pohon keputusan, sehingga sulit untuk menelusuri logika keputusan tunggal.
     - Membutuhkan lebih banyak sumber daya komputasi dan waktu untuk melatih dibandingkan dengan decision tree tunggal.
+
 2. Pelatihan Model dan Hyperparameter Tuning
    - Untuk Random Forest, kita akan memulai dengan jumlah estimasi default (misalnya, 100 pohon).
    - Setiap model akan dilatih menggunakan data pelatihan (X_train dan y_train).
