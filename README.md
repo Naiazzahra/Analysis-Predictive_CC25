@@ -144,12 +144,24 @@ Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan m
   Dataset akan dibagi menjadi set pelatihan (misalnya, 80%) dan set pengujian (20%) menggunakan train_test_split. Parameter stratify=y akan digunakan. Pembagian data ini memastikan bahwa model dilatih pada satu subset data dan dievaluasi pada subset lain yang tidak pernah dilihat sebelumnya, memberikan estimasi kinerja model yang lebih realistis pada data baru. stratify=y penting untuk memastikan distribusi kelas target (Quality of Sleep) proporsional di kedua set, terutama jika ada ketidakseimbangan kelas.
 
 ## Modeling
-Tahap pemodelan melibatkan pemilihan, pelatihan, dan pengoptimalan algoritma machine learning untuk memprediksi kualitas tidur. Dalam proyek ini, kami akan menggunakan algoritma klasifikasi Random Forest
+Tahap pemodelan adalah inti dari proyek machine learning ini, perlu membangun dan melatih algoritma untuk memprediksi kualitas tidur berdasarkan faktor gaya hidup. Bagian ini akan membahas pemilihan algoritma, penjelasan cara kerja dan parameter dari masing-masing algoritma, proses pelatihan model baseline, dan upaya peningkatan kinerja melalui hyperparameter tuning.
 
 **Pemilihan Algoritma**: 
+Untuk menyelesaikan masalah klasifikasi kualitas tidur, Algoritma yang digunakan yaitu Random Forest Classifier
 1. Random Forest Classifier
-   
-   a. Kelebihan
+
+   Random Forest adalah metode ensemble learning yang bekerja dengan membangun sejumlah besar (forest) decision tree pada subset data pelatihan yang berbeda dan mengumpulkan hasil prediksi dari masing-masing pohon untuk mendapatkan prediksi akhir. Prosesnya melibatkan langkah-langkah berikut:
+
+   a. Parameter
+
+   - n_estimators: Mengatur jumlah decision tree dalam hutan. Nilai yang lebih tinggi umumnya menghasilkan model yang lebih robust dan akurat, tetapi juga meningkatkan waktu komputasi dan penggunaan memori. Nilai default seringkali 100.
+   - max_depth: Mengontrol kedalaman maksimum dari setiap decision tree dalam hutan. None berarti pohon akan berkembang penuh hingga semua daun murni atau hingga semua daun mengandung kurang dari min_samples_split sampel. Mengatur nilai tertentu dapat membantu mencegah overfitting pada pohon individual.
+   - min_samples_split: Jumlah sampel minimum yang diperlukan untuk membagi sebuah node internal. Nilai yang lebih tinggi mencegah pohon dari belajar pola yang terlalu spesifik, mengurangi overfitting.
+   - min_samples_leaf: Jumlah sampel minimum yang harus ada di node daun. Nilai yang lebih tinggi memastikan bahwa setiap daun merepresentasikan sejumlah data yang cukup, mengurangi overfitting.
+   - random_state: Mengatur seed untuk pembangkit angka acak, memastikan hasil yang dapat direproduksi.
+   - criterion: Fungsi untuk mengukur kualitas split. Umumnya gini (Gini Impurity) atau entropy (Information Gain).
+
+   b. Kelebihan
 
     - Biasanya memberikan performa yang baik sehingga menghasilkan akurasi yang tinggi.
     - Karena menggabungkan banyak decision tree yang dilatih secara independen, Random Forest cenderung tidak overfit.
@@ -157,16 +169,20 @@ Tahap pemodelan melibatkan pemilihan, pelatihan, dan pengoptimalan algoritma mac
     -  apat mengukur kontribusi relatif dari setiap fitur terhadap prediksi.
   
 
-   b. Kekurangan
+   c. Kekurangan
 
     - Modelnya seperti "kotak hitam" karena melibatkan banyak pohon keputusan, sehingga sulit untuk menelusuri logika keputusan tunggal.
     - Membutuhkan lebih banyak sumber daya komputasi dan waktu untuk melatih dibandingkan dengan decision tree tunggal.
 
-2. Pelatihan Model dan Hyperparameter Tuning
-   - Untuk Random Forest, kita akan memulai dengan jumlah estimasi default (misalnya, 100 pohon).
+   ***Pelatihan Model dan  Improvement Model (Hyperparameter Tuning)**
+
+    Tujuan dari tuning adalah untuk menemukan kombinasi hyperparameter yang paling optimal yang akan menghasilkan kinerja model terbaik pada data yang tidak terlihat (data pengujian).
    - Setiap model akan dilatih menggunakan data pelatihan (X_train dan y_train).
-   - pada hyperparameter tuning untuk Random Forest karena ia adalah model yang kuat dan berkinerja tinggi. Teknik GridSearchCV akan digunakan untuk mencari kombinasi hyperparameter terbaik seperti n_estimators (jumlah pohon), max_depth (kedalaman maksimum pohon), dan min_samples_split (jumlah sampel minimum yang diperlukan untuk membagi node).
+   - Metode yang digunakan yaitu GridSearchCV dari sklearn.model_selection. GridSearchCV adalah metode pencarian hyperparameter yang secara sistematis membangun dan mengevaluasi model untuk setiap kombinasi hyperparameter yang ditentukan dalam suatu grid.
+   - pada hyperparameter tuning untuk Random Forest karena ia adalah model yang kuat dan berkinerja tinggi. Teknik GridSearchCV akan digunakan untuk mencari kombinasi hyperparameter terbaik seperti n_estimators (jumlah pohon dalam hutan [50, 100, 150, 200]), max_depth (kedalaman maksimum pohon [None, 10, 20, 30]), dan min_samples_split (jumlah sampel minimum yang diperlukan untuk membagi node [2, 5, 10]), dan min_sample_leaf (jumlah sample minimum yang diperlukan untuk berasa di node [1, 2, 4]).
    - Proses Improvement: GridSearchCV akan melakukan pencarian exhaustif di atas grid parameter yang ditentukan, melatih dan mengevaluasi model untuk setiap kombinasi menggunakan validasi silang (cross-validation). Model terbaik dari GridSearchCV akan dipilih sebagai model final.
+   - Validasi Silang (Cross-Validation): GridSearchCV menggunakan validasi silang (disini cv=5) untuk mengevaluasi setiap kombinasi parameter, memastikan bahwa kinerja yang diukur lebih robust dan tidak hanya bergantung pada satu pembagian data pelatihan/validasi.
+   - Metrik Penilaian (Scoring): Metrik f1_weighted digunakan sebagai metrik penilaian utama (scoring='f1_weighted') untuk pemilihan parameter terbaik. F1-Score (weighted) dipilih karena ia menyeimbangkan presisi dan recall, dan "weighted" memastikan bahwa ia memperhitungkan ketidakseimbangan kelas
   
 ## Evaluation
 Tahap evaluasi sangat penting untuk mengukur seberapa baik model yang telah dilatih dapat memprediksi kualitas tidur pada data yang belum pernah dilihat sebelumnya. Metrik evaluasi yang digunakan harus sesuai dengan masalah klasifikasi, yaitu Akurasi, Presisi, Recall, dan F1-Score.
@@ -241,3 +257,11 @@ Tahap evaluasi sangat penting untuk mengukur seberapa baik model yang telah dila
   - False Negatives (FN) = 8: Ini adalah jumlah kasus di mana kualitas tidur aktualnya adalah 'Good' tetapi model memprediksi 'Bad'. Ini berarti ada 8 kasus tidur 'Good' yang terlewat dan salah diklasifikasikan sebagai 'Bad'.
   - True Positives (TP) = 34: Ini adalah jumlah kasus di mana kualitas tidur aktualnya adalah 'Good' dan model memprediksi 'Good'. Ini adalah prediksi yang benar.
 
+
+**Penjabaran dampak model terhadap Business Understanding**
+ 1. Menjawab Problem Statement 
+    - Model berhasil memprediksi kualitas tidur dengan akurasi 92.23%. Ini secara langsung menjawab problem statement kemampuan model untuk mengklasifikasikan kualitas tidur sebagai "Baik" atau "Buruk".
+    - Meskipun evaluasi model tidak secara langsung menampilkan "faktor-faktor yang memengaruhi", akurasi dan kinerja model yang tinggi (terutama F1-Score yang baik) mengindikasikan bahwa fitur-fitur yang digunakan dalam pelatihan memang relevan dan mampu menangkap pola yang signifikan terkait kualitas tidur. Ini secara implisit memvalidasi bahwa faktor-faktor seperti Heart Rate, Sleep Duration, dan Stress Level (yang memiliki korelasi kuat) adalah prediktor penting.
+ 2. Mencapai Setiap Goals yang Diharapkan
+    - Model mampu mengklasifikasikan kualitas tidur dengan akurasi tinggi (92.23%). Khususnya, kemampuan model untuk mendeteksi semua kasus 'Bad' (Recall 100% untuk kelas 'Bad') sangat kritis dari perspektif bisnis/kesehatan. Ini berarti bahwa individu yang benar-benar memiliki kualitas tidur "Buruk" kemungkinan besar akan teridentifikasi oleh sistem.
+    - Model ini dibangun berdasarkan prediktor yang diekstrak dari dataset. Kinerja model yang kuat membuktikan bahwa fitur-fitur tersebut (usia, tingkat aktivitas fisik, tingkat stres, detak jantung, durasi tidur, langkah harian, dll.) adalah kunci dalam membedakan antara kualitas tidur "Baik" dan "Buruk". Analisis korelasi di tahap EDA sudah mengidentifikasi Heart Rate, Sleep Duration, dan Stress Level sebagai prediktor kuat.
