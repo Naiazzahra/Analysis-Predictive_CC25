@@ -61,22 +61,7 @@ Dataset dipilih berdasar
    - Missing Values 
   
       Terdapat nilai hilang terdeteksi pada kolom 'Sleep Disorder'
-| Kolom | Jumlah Nilai Hilang |
-| :------------------------- | :-------------------------- |
-| Sleep Disorder | 270 |
-| Person ID | 0 |
-| Gender | 0 |
-| Age | 0 |
-| Occupation | 0 |
-| Sleep Duration | 0 |
-| Quality of Sleep | 0 |
-| Physical Activity Level | 0 |
-| Stress Level | 0 |
-| BMI Category | 0 |
-| Blood Pressure | 0 |
-| Heart Rate | 0 |
-| Daily Steps | 0 |
-
+      ![Jumlah Missing Values](images/jumlah_missing_values.png)
 
   - Jumlah Duplikat
   
