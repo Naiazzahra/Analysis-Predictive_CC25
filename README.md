@@ -54,7 +54,62 @@ Dataset dipilih berdasar
 - Daily Steps (int64): Jumlah langkah harian yang diambil individu. Ini adalah fitur numerik.
 - Sleep Disorder (object): Jenis gangguan tidur yang mungkin dimiliki individu ( Insomnia, Sleep Apnea, None). Ini adalah fitur kategorikal.
 
+1. Gambaran Umum Dataset
+   - Jumlah baris dan kolom
+     - Jumlah baris : 514
+     - Jumlah kolom : 13
+   - Missing Values 
+  
+      Terdapat nilai hilang terdeteksi pada kolom 'Sleep Disorder'
+      | Kolom | Jumlah Nilai Hilang | Persentase Nilai Hilang (%) |
+      | :------------------------- | :-------------------------- |
+      | Sleep Disorder | 270 |
+      | Person ID | 0 |
+      | Gender | 0 |
+      | Age | 0 |
+      | Occupation | 0 |
+      | Sleep Duration | 0 |
+      | Quality of Sleep | 0 |
+      | Physical Activity Level | 0 |
+      | Stress Level | 0 |
+      | BMI Category | 0 |
+      | Blood Pressure | 0 |
+      | Heart Rate | 0 |
+      | Daily Steps | 0 |
 
+
+  - Jumlah Duplikat
+  
+      Tidak Terdapat duplikasi pada dataset
+
+  - Ringkasan Outlier yang ditemukan
+      - Age:
+        - Tidak ada outlier ekstrem yang terdeteksi pada distribusi usia.
+
+      - Sleep Duration:
+        - Terdapat outlier di sisi bawah (kiri) distribusi, menunjukkan beberapa individu dengan durasi tidur yang sangat rendah, sekitar 3.0 hingga 4.5 jam.
+Ada juga beberapa outlier di sisi atas (kanan) distribusi, di sekitar 10.0 jam.
+
+      - Physical Activity Level:
+        - Tidak ada outlier ekstrem yang terdeteksi pada tingkat aktivitas fisik.
+
+      - Stress Level:
+        - Tidak ada outlier ekstrem yang terdeteksi pada tingkat stres.
+      
+      - Heart Rate:
+        - Terdapat beberapa outlier di sisi kanan (atas) distribusi, menunjukkan adanya individu dengan denyut jantung yang jauh lebih tinggi daripada mayoritas data, berkisar antara 80 bpm hingga 100 bpm.
+
+      - Daily Steps:
+        - Terdapat outlier di kedua sisi distribusi:
+          - Sisi kiri (bawah), menunjukkan beberapa individu dengan jumlah langkah harian yang sangat rendah (sekitar 1000-2000 langkah).
+          - Sisi kanan (atas), menunjukkan beberapa individu dengan jumlah langkah harian yang sangat tinggi (sekitar 12000-14000 langkah).
+
+      - Quality of Sleep:
+        - Terdapat outlier di sisi kiri (bawah) distribusi, menunjukkan beberapa individu yang melaporkan kualitas tidur yang sangat rendah, berkisar antara 1.0 hingga 2.0 pada skala 1-10.
+  
+  Keberadaan outlier ini mengindikasikan adanya nilai-nilai ekstrem yang mungkin perlu ditinjau lebih lanjut pada tahap pra-pemrosesan data. Penanganan outlier yang tepat dapat membantu meningkatkan performa model.
+
+  
 ## Data Preparation
 Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan machine learning. Teknik-teknik yang diterapkan di sini mengikuti urutan logis untuk membersihkan, mengubah, dan menyiapkan fitur.
 
@@ -85,7 +140,7 @@ Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan m
 - Usia dan Durasi Tidur (0.34): Korelasi positif yang lemah. Ini menunjukkan sedikit kecenderungan bagi individu yang lebih tua untuk memiliki durasi tidur yang lebih lama, tetapi itu bukan hubungan yang kuat.
 - Langkah Harian dan Kualitas Tidur (0.02): Korelasi positif yang sangat lemah, hampir dapat diabaikan. Ini menyiratkan bahwa jumlah langkah harian memiliki sedikit atau tidak ada hubungan linier dengan kualitas tidur berdasarkan data ini.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
+ **Teknik Yang digunakan pada Data Preparation :**
 - Penangan Kolom 'Person ID'
   Mendrop/menghilangkan kolom 'person ID' dengan menggunakan .dropna(). Person ID adalah pengenal unik untuk setiap entri dan tidak memiliki nilai prediktif terhadap kualitas tidur. Jika dimasukkan dalam model, ini dapat menyebabkan overfitting dan tidak memberikan wawasan umum.
   
@@ -102,7 +157,7 @@ Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan m
   Dataset akan dibagi menjadi set pelatihan (misalnya, 80%) dan set pengujian (20%) menggunakan train_test_split. Parameter stratify=y akan digunakan. Pembagian data ini memastikan bahwa model dilatih pada satu subset data dan dievaluasi pada subset lain yang tidak pernah dilihat sebelumnya, memberikan estimasi kinerja model yang lebih realistis pada data baru. stratify=y penting untuk memastikan distribusi kelas target (Quality of Sleep) proporsional di kedua set, terutama jika ada ketidakseimbangan kelas.
 
 ## Modeling
-Tahap pemodelan melibatkan pemilihan, pelatihan, dan pengoptimalan algoritma machine learning untuk memprediksi kualitas tidur. Dalam proyek ini, kami akan menggunakan dua algoritma klasifikasi utama untuk perbandingan: Random Forest Classifier dan Decision Tree Classifier, serta K-Nearest Neighbors sebagai pembanding tambahan.
+Tahap pemodelan melibatkan pemilihan, pelatihan, dan pengoptimalan algoritma machine learning untuk memprediksi kualitas tidur. Dalam proyek ini, kami akan menggunakan dua algoritma klasifikasi Random Forest
 
 **Pemilihan Algoritma**: 
 1. Random Forest Classifier
