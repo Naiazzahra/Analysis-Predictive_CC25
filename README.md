@@ -144,7 +144,7 @@ Tahap persiapan data adalah krusial untuk memastikan data siap untuk pemodelan m
   Dataset akan dibagi menjadi set pelatihan (misalnya, 80%) dan set pengujian (20%) menggunakan train_test_split. Parameter stratify=y akan digunakan. Pembagian data ini memastikan bahwa model dilatih pada satu subset data dan dievaluasi pada subset lain yang tidak pernah dilihat sebelumnya, memberikan estimasi kinerja model yang lebih realistis pada data baru. stratify=y penting untuk memastikan distribusi kelas target (Quality of Sleep) proporsional di kedua set, terutama jika ada ketidakseimbangan kelas.
 
 ## Modeling
-Tahap pemodelan melibatkan pemilihan, pelatihan, dan pengoptimalan algoritma machine learning untuk memprediksi kualitas tidur. Dalam proyek ini, kami akan menggunakan dua algoritma klasifikasi Random Forest
+Tahap pemodelan melibatkan pemilihan, pelatihan, dan pengoptimalan algoritma machine learning untuk memprediksi kualitas tidur. Dalam proyek ini, kami akan menggunakan algoritma klasifikasi Random Forest
 
 **Pemilihan Algoritma**: 
 1. Random Forest Classifier
