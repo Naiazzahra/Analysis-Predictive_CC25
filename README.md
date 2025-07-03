@@ -1,7 +1,7 @@
 # Laporan Proyek Machine Learning - Naia Az - Zahra MC132D5X1884
-## Prediksi Kualitas Tidur Berdasarkan Faktor Gaya Hidup
+# Prediksi Kualitas Tidur Berdasarkan Faktor Gaya Hidup
 
-## Domain Proyek
+### Domain Proyek
 ### Latar Belakang
 Kualitas tidur adalah pilar utama kesehatan fisik dan mental yang seringkali terabaikan di tengah gaya hidup modern yang serba cepat. Kurang tidur atau kualitas tidur yang buruk telah dikaitkan dengan berbagai masalah kesehatan serius, termasuk penyakit jantung, diabetes tipe 2, obesitas, gangguan suasana hati, dan penurunan fungsi kognitif [1], [2]. Dengan semakin berkembangnya teknologi wearable dan kesadaran akan pentingnya self-care, individu memiliki akses data yang lebih besar tentang pola tidur dan gaya hidup mereka.
 
